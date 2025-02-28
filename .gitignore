@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.zip
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Extension specific
+*.pem
+*.crx
+*.xpi
+
+# Environment variables and API keys
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+api_keys.js
+api_keys.json
+config/keys.js
+config/secrets.js
+**/apikey.*
+**/api_key.*
+.anthropic_api_key
+credentials.json
+
+# Logs
+logs/
+*.log
