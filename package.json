@@ -1,25 +1,29 @@
 {
   "name": "bokohacks25-",
-  "version": "1.0.0",
-  "description": "## boko_vulnerability_checker",
+  "version": "0.1.0",
+  "description": "A browser extension that detects potential security vulnerabilities in web applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "lint": "eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrisdeso/bokoHacks25-.git"
-  },
-  "keywords": [],
+  "keywords": [
+    "security",
+    "vulnerability",
+    "scanner",
+    "firefox",
+    "extension"
+  ],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/chrisdeso/bokoHacks25-/issues"
-  },
-  "homepage": "https://github.com/chrisdeso/bokoHacks25-#readme",
+  "license": "MIT",
   "devDependencies": {
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }

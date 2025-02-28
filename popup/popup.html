@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Boko Vulnerability Detector</h1>
+    
+    <div class="controls">
+      <button id="scanButton" class="primary-btn">Scan This Page</button>
+      <div class="scan-options">
+        <label>
+          <input type="checkbox" id="passiveScan" checked> Passive Scan
+        </label>
+        <label>
+          <input type="checkbox" id="activeScan"> Active Tests
+        </label>
+        <label>
+          <input type="checkbox" id="aiAnalysis" checked> AI Analysis
+        </label>
+      </div>
+    </div>
+    
+    <div class="results-container">
+      <div class="summary">
+        <h2>Scan Summary</h2>
+        <div id="scanSummary">No scan performed yet</div>
+      </div>
+      
+      <div class="vulnerabilities">
+        <h2>Detected Issues</h2>
+        <div id="vulnList" class="vuln-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

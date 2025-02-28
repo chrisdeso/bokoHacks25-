@@ -1,0 +1,259 @@
+/* Popup Styles for Boko Vulnerability Detector */
+
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #3498db;
+  --color-background: #f8f9fa;
+  --color-text: #2c3e50;
+  --color-border: #ddd;
+  --color-critical: #e74c3c;
+  --color-high: #e67e22;
+  --color-medium: #f39c12;
+  --color-low: #3498db;
+  --color-none: #2ecc71;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  width: 400px;
+  min-height: 300px;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 15px;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+h2 {
+  font-size: 16px;
+  margin: 15px 0 10px;
+  color: var(--color-secondary);
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #2980b9;
+}
+
+.primary-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.scan-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.scan-options label {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.scan-options input {
+  margin-right: 5px;
+}
+
+.results-container {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.summary {
+  padding: 15px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.summary-counts {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.count {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.count.critical {
+  background-color: var(--color-critical);
+}
+
+.count.high {
+  background-color: var(--color-high);
+}
+
+.count.medium {
+  background-color: var(--color-medium);
+}
+
+.count.low {
+  background-color: var(--color-low);
+}
+
+.summary-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.total-issues {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.vulnerabilities {
+  padding: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.vulnerability {
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vulnerability.critical {
+  border-left: 4px solid var(--color-critical);
+}
+
+.vulnerability.high {
+  border-left: 4px solid var(--color-high);
+}
+
+.vulnerability.medium {
+  border-left: 4px solid var(--color-medium);
+}
+
+.vulnerability.low {
+  border-left: 4px solid var(--color-low);
+}
+
+.vuln-header {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.vuln-header h3 {
+  font-size: 14px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.vuln-header:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.severity-badge {
+  padding: 3px 6px;
+  border-radius: 3px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.severity-badge.critical {
+  background-color: var(--color-critical);
+}
+
+.severity-badge.high {
+  background-color: var(--color-high);
+}
+
+.severity-badge.medium {
+  background-color: var(--color-medium);
+}
+
+.severity-badge.low {
+  background-color: var(--color-low);
+}
+
+.vuln-details {
+  padding: 15px;
+  font-size: 13px;
+  line-height: 1.4;
+  display: none;
+}
+
+.vulnerability.expanded .vuln-details {
+  display: block;
+}
+
+.vuln-details p {
+  margin-bottom: 10px;
+}
+
+.vuln-details div {
+  margin-bottom: 5px;
+}
+
+.vuln-details code {
+  background-color: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  display: block;
+  margin-top: 3px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.no-vulns {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-none);
+  font-weight: bold;
+}
